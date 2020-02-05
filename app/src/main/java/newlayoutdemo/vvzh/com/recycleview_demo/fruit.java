@@ -1,10 +1,10 @@
 package newlayoutdemo.vvzh.com.recycleview_demo;
 
-public class fruit {
+public class Fruit {
     private String fruit_name;
     private int imgId;
 
-    public fruit(String fruit_name, int imgId) {
+    public Fruit(String fruit_name, int imgId) {
         this.fruit_name = fruit_name;
         this.imgId = imgId;
     }

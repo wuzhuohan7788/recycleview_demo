@@ -10,27 +10,27 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class fruitAdapter extends RecyclerView.Adapter<fruitAdapter.ViewHolder> {
+public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
 
-    private List<fruit> mFruitList;
+    private List<Fruit> mFruitList;
 
-    public fruitAdapter(List<fruit> mFruitList) {
+    public FruitAdapter(List<Fruit> mFruitList) {
         this.mFruitList = mFruitList;
     }
 
     @NonNull
     @Override
-    public fruitAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_fruit, viewGroup, false);
+    public FruitAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_fruit, null, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull fruitAdapter.ViewHolder viewHolder, int i) {
-        fruit fruit = mFruitList.get(i);
-        viewHolder.fruit_image.setImageResource(fruit.getImgId());
-        viewHolder.fruit_name.setText(fruit.getFruit_name());
+    public void onBindViewHolder(@NonNull FruitAdapter.ViewHolder viewHolder, int i) {
+        Fruit Fruit = mFruitList.get(i);
+        viewHolder.fruit_image.setImageResource(Fruit.getImgId());
+        viewHolder.fruit_name.setText(Fruit.getFruit_name());
     }
 
     @Override
